@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    todo details twig page
+    name : {{ details.name }} <br>
+    description : {{ details.description }} <br>
+    duedate : {{ details.dueDate.format('d-m-y') }} <br>
+{% endblock %}
