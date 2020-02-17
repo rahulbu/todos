@@ -2,6 +2,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\DBAL\Types\DateTimeType;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -63,6 +64,19 @@ class Todo
      */
     private $createdAt;
 
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="status", type="boolean", options={"default":0})
+     */
+    private $status;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User",cascade={"ALL"})
+     * @ORM\JoinColumn(referencedColumnName="userId", name="userId")
+     */
+    private $userId;
 
     /**
      * Get id
@@ -216,6 +230,38 @@ class Todo
     public function getCreatedAt()
     {
         return $this->createdAt;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUserId()
+    {
+        return $this->userId;
+    }
+
+    /**
+     * @param mixed $userId
+     */
+    public function setUserId($userId)
+    {
+        $this->userId = $userId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param mixed $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
     }
 }
 

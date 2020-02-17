@@ -7,10 +7,15 @@
         <div class="col-md-4">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">{{ todo.name }}</h5>
-                    <p class="card-text">{{ todo.description }}</p>
-                    <a href="/todos/show/{{ todo.id }}" class="card-link">Details</a>
-                    <a href="/todos/{{ todo.id }}/delete" class="card-link" style="color: red;">Delete</a>
+                    <h5 class="card-title"><a href="/todos/{{ todo.id }}">{{ todo.name }}</a></h5>
+                    <p class="card-text">due date : {{ todo.dueDate.format('d-m-y') }}</p>
+                    {% if todo.status %}
+                        done!!
+                    {% else %}
+                    <a class="btn btn-success" href="/todos/{{ todo.id }}/update" class="card-link">mark as done</a>
+
+                    {% endif %}
+                    <a class="btn btn-danger" href="/todos/{{ todo.id }}/delete" class="card-link">Delete</a>
                 </div>
             </div>
         </div>

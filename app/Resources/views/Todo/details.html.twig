@@ -2,8 +2,26 @@
 
 
 {% block body %}
-    todo details twig page
-    name : {{ details.name }} <br>
-    description : {{ details.description }} <br>
-    duedate : {{ details.dueDate.format('d-m-y') }} <br>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="" style="width: 18rem;">
+                <div class="">
+                    <h1 class="">{{ details.name }}</h1>
+                    <h4>category : {{ details.category }} </h4><br>
+                    <p class="">
+                        {{ details.description }}
+                    </p>
+                    <h3>Due Date : {{ details.dueDate.format("d-m-y") }}</h3>
+                    <h4>created at : {{ details.createdAt.format("d-m-y") }}</h4>
+                    {% if details.status==0 %}
+                    <a class="btn btn-primary" href="/todos/{{ details.id }}/edit" class="card-link">Edit</a>
+                        {% else %}
+                        completed!
+                    {% endif %}
+                    <a class="btn btn-danger" href="/todos/{{ details.id }}/delete" class="card-link">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

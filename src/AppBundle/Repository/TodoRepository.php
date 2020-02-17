@@ -10,5 +10,13 @@ namespace AppBundle\Repository;
  */
 class TodoRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findAllTodos(){
+        $qb = $this->createQueryBuilder('td')
+            ->select('td.id','td.status','td.name','td.description','td.dueDate','td.createdAt','td.status','td.category','td.priority')
+//            ->groupBy('td.status');
+            ->orderBy('td.dueDate','asc');
+        $query = $qb->getQuery();
 
+        return $query->execute();
+    }
 }

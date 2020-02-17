@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ff0fb60-0f58-40d9-9896-bbb3c1960671" name="Default Changelist" comment="" />
+    <list default="true" id="1ff0fb60-0f58-40d9-9896-bbb3c1960671" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/User/create.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/User/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/User/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/default/login.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Manager/UserManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/Todo/details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/Todo/details.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/Todo/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/Todo/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/Todo/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/Todo/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/TodoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/TodoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Todo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Todo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Manager/TodoManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Manager/TodoManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Repository/TodoRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/TodoRepository.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +34,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -57,13 +82,18 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1XkVWHz1qneajSNKQtnKUeHmkFq" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -84,18 +114,26 @@
       <updated>1581590109556</updated>
       <workItem from="1581590122797" duration="7127000" />
       <workItem from="1581657556071" duration="8274000" />
-      <workItem from="1581681767170" duration="2131000" />
+      <workItem from="1581681767170" duration="2272000" />
+      <workItem from="1581875592298" duration="22036000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="350" y="223" key="NewPhpClassDialog" timestamp="1581675635407">
+    <state x="378" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581879927071">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="350" y="223" key="NewPhpClassDialog/0.0.1280.800@0.0.1280.800" timestamp="1581675635407" />
+    <state x="378" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.800@0.0.1280.800" timestamp="1581879927071" />
+    <state x="350" y="223" key="NewPhpClassDialog" timestamp="1581875746823">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="350" y="223" key="NewPhpClassDialog/0.0.1280.800@0.0.1280.800" timestamp="1581875746823" />
     <state x="319" y="232" key="com.intellij.ide.util.TipDialog" timestamp="1581681772395">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

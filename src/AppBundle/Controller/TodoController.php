@@ -24,23 +24,17 @@ class TodoController extends Controller
     }
 
     /**
-     * @Route("/",name="home")
+     * @Route("/todos",name="home")
      */
     public function indexAction()
     {
-//        die("todos");
-        $todos = $this->getDoctrine()
-            ->getRepository('AppBundle:Todo')
-            ->findAll();
-        $todosDesc = $this->getDoctrine()->getRepository('AppBundle:Todo')->findBy(array(),array('createdAt'=>'desc'));
 
-        return $this->render("Todo/index.html.twig",array('todos'=>$todosDesc));
-//            return $this->json($todos);
-//        return $this->render('', array('name' => $name));
+        $todos = $this->todoManager->findAllTodos();
+        return $this->render("Todo/index.html.twig",array('todos'=>$todos));
     }
 
     /**
-     * @Route("/todos/create")
+     * @Route("/todos/create",methods={"GET","POST"})
      * @param Request $request
      * @return Response
      * @throws \Exception
@@ -50,6 +44,7 @@ class TodoController extends Controller
         $todo = new Todo();
 
         $form = $this->createFormBuilder($todo)
+            ->add('userId', TextType::class,array('attr'=>array('class'=>'form-control','Readonly'=>'true','value'=>$request->get('id',$default=null))))
             ->add('name', TextType::class,array('attr'=>array('class'=>'form-control')))
             ->add('category', TextType::class,array('attr'=>array('class'=>'form-control')))
             ->add('description', TextType::class,array('attr'=>array('class'=>'form-control')))
@@ -67,26 +62,50 @@ class TodoController extends Controller
             $this->todoManager->addTask($todo);
 
             return $this->redirectToRoute('home');
-//            return new Response("form submitted");
-//            die('submitted');
         }
 
 
         return $this->render("Todo/create.html.twig",array('form'=>$form->createView()));
     }
-    /**
-     * @Route("/todos/edit/{id}")
-     */
-    public function editAction($id)
-    {
 
-        $log = $this->container->get('logger');
-        $log->log('a',"nothing to edit");
-        return $this->render("Todo/edit.html.twig");
+    /**
+     * @Route("/todos/{id}/edit",methods={"GET","POST"})
+     */
+    public function editAction(Request $request,$id)
+    {
+        $todo = $this->todoManager->findTodo($id);
+        if(!$todo)
+            throw $this->todoNotFoundException('task not found.');
+
+
+        $form = $this->createFormBuilder($todo)
+//            ->add('userId', TextType::class,array('attr'=>array('class'=>'form-control','Readonly'=>'true','value'=>$request->get('id',$default=null))))
+            ->add('name', TextType::class,array('attr'=>array('class'=>'form-control','value'=>$todo->getName())))
+            ->add('category', TextType::class,array('attr'=>array('class'=>'form-control','value'=>$todo->getCategory())))
+            ->add('description', TextType::class,array('attr'=>array('class'=>'form-control','value'=>$todo->getDescription())))
+            ->add('priority', ChoiceType::class,array('choices'=>array('low'=>'low','normal'=>'normal','high'=>'high'),'attr'=>array('class'=>'form-control')))
+            ->add('dueDate', DateTimeType::class,array('attr'=>array('class'=>'formcontrol')))
+            ->add('submit', SubmitType::class,array('label'=>'Edit todo','attr'=>array('class'=>'btn btn-primary')))
+            ->getForm();
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            $this->todoManager->editTodo($form->getData());
+            return $this->redirectToRoute('home');
+        }
+        else
+        return $this->render("Todo/edit.html.twig",array('form'=>$form->createView()));
+    }
+    /**
+     * @Route("/todos/{id}/update")
+     */
+    public function updateAction($id){
+        $todo = $this->todoManager->updateTodo($id);
+        return $this->redirectToRoute('home');
     }
 
     /**
-     * @Route("/todos/show/{id}")
+     * @Route("/todos/{id}",name="show_todo")
      * @param $id
      * @return Response
      */
