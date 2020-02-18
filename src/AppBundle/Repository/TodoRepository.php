@@ -1,6 +1,8 @@
 <?php
 
 namespace AppBundle\Repository;
+use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\DBAL\Connection;
 
 /**
  * TodoRepository
@@ -12,13 +14,14 @@ class TodoRepository extends \Doctrine\ORM\EntityRepository
 {
     public function findAllTodos($id){
         $qb = $this->createQueryBuilder('td')
-            ->select('td.id','td.status','td.name','td.description','td.dueDate','td.createdAt','td.status','td.category','td.priority')
-//            ->groupBy('td.status');
+            ->select('td.id','td.status','td.name','td.description','td.dueDate','td.createdAt','td.category','td.priority')
             ->where('td.userId = :userid')
-            ->orderBy('td.dueDate','asc')
+            ->addOrderBy('td.status','asc')
+            ->addOrderBy('td.dueDate','asc')
             ->setParameter('userid',$id);
         $query = $qb->getQuery();
-
+//        $sql = "select status, name,id,due_date as dueDate,created_at, description, category, priority as createdAt from todo where userId='rahul' group by status,dueDate,priority order by status,dueDate";
+//        return $this->getEntityManager()->getConnection()->query($sql);
         return $query->execute();
     }
 }

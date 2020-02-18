@@ -25,15 +25,9 @@ class TodoManager
         $this->queryBuilder = $this->entityRepository->createQueryBuilder('Todo');
     }
 
-    public function addTask(Todo $todoClone){
+    public function addTask(Todo $todo){
 
-        $user = $this->entityManager->getRepository(User::class)->findOneBy(array('userId'=>$todoClone->getUserId()));
-        $todo = new Todo();
-        $todo->setPriority($todoClone->getPriority());
-        $todo->setDueDate($todoClone->getDueDate());
-        $todo->setDescription($todoClone->getDescription());
-        $todo->setCategory($todoClone->getCategory());
-        $todo->setName($todoClone->getName());
+        $user = $this->entityManager->getRepository(User::class)->findOneBy(array('userId'=>$todo->getUserId()));
         $todo->setCreatedAt(new \DateTime('now'));
         $todo->setStatus(0);
         $todo->setUserId($user);
@@ -49,6 +43,7 @@ class TodoManager
 
     public function findAllTodos($id){
         return $this->entityRepository->findAllTodos($id);
+
      }
     public function findTodo($id){
         return $this->entityRepository->findOneBy(array('id'=>$id));

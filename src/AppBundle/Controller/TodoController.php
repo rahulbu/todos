@@ -43,7 +43,6 @@ class TodoController extends Controller
         $todo = new Todo();
 
         $form = $this->createFormBuilder($todo)
-            ->add('userId', TextType::class,array('attr'=>array('class'=>'form-control','Readonly'=>'true','value'=>$this->getUser()->getUsername())))
             ->add('name', TextType::class,array('attr'=>array('class'=>'form-control')))
             ->add('category', TextType::class,array('attr'=>array('class'=>'form-control')))
             ->add('description', TextType::class,array('attr'=>array('class'=>'form-control')))
