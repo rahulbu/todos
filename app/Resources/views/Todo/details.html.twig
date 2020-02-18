@@ -7,8 +7,12 @@
             <div class="container-fluid">
                 <div class="jumbotron jumbotron-fluid">
                     <div class="container">
-                        <h1 class="">{{ details.name }}</h1>
-                        <h4>category : {{ details.category }} </h4><br>
+                        <h1 class="">{{ details.name }}
+                            {% if details.status==0 %}
+                            <a class="btn btn-success" href="/todos/{{ details.id }}/update" class="card-link">mark as done</a>
+                            {% endif %}
+                        </h1>
+                        <h6>category : {{ details.category }} </h6><br>
                         <p class="">
                             {{ details.description }}
                         </p>
@@ -17,7 +21,7 @@
                         {% if details.status==0 %}
                             <a class="btn btn-primary" href="/todos/{{ details.id }}/edit" class="card-link">Edit</a>
                         {% else %}
-                            completed!
+                            <strong style="background-color: limegreen;">COMPLETED!</strong>
                         {% endif %}
                         <a class="btn btn-danger" href="/todos/{{ details.id }}/delete" class="card-link">Delete</a>
                     </div>
@@ -25,5 +29,4 @@
             </div>
         </div>
     </div>
-
 {% endblock %}
