@@ -9,6 +9,7 @@
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title"><a href="/todos/{{ todo.id }}">{{ todo.name }}</a></h5>
+                        <h6>priority :  {{ todo.priority }}</h6>
                         <p class="card-text">due date : {{ todo.dueDate.format('d-m-y') }}</p>
                         {% if todo.status %}
                             done!!
