@@ -1,9 +1,6 @@
 <?php
 
-
 namespace AppBundle\Manager;
-
-
 use AppBundle\Entity\User;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
@@ -33,19 +30,13 @@ class UserManager
      */
     public function deleteUser($userId){
         $user = $this->entityRepository->findOneBy(array("userId"=>$userId));
-        if(!user)
+        if(!$user)
             throw $this->userNotFoundException('user not found with the id '.$userId);
         $this->entityManager->remove($user);
         $this->entityManager->flush();
     }
 
     public function editUser(User $user){
-        $existingUser = $this->entityRepository->findBy(array("userId"=>$user->getUserId()));
-        if(!$existingUser){
-            throw $this->userNotFoundException("no user found with id : ".$user->getUserId());
-        }
-        $existingUser->setName($user->getName());
-        $existingUser->setDesignation($user->getDesignation());
         $this->entityManager->flush();
     }
 

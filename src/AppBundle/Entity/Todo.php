@@ -73,7 +73,7 @@ class Todo
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User",cascade={"ALL"})
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User")
      * @ORM\JoinColumn(referencedColumnName="userId", name="userId")
      */
     private $userId;

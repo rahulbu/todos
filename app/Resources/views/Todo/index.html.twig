@@ -2,24 +2,25 @@
 
 
 {% block body %}
+<div class="container-fluid">
     <div class="row">
-    {% for todo in todos %}
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title"><a href="/todos/{{ todo.id }}">{{ todo.name }}</a></h5>
-                    <p class="card-text">due date : {{ todo.dueDate.format('d-m-y') }}</p>
-                    {% if todo.status %}
-                        done!!
-                    {% else %}
-                    <a class="btn btn-success" href="/todos/{{ todo.id }}/update" class="card-link">mark as done</a>
+        {% for todo in todos %}
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="/todos/{{ todo.id }}">{{ todo.name }}</a></h5>
+                        <p class="card-text">due date : {{ todo.dueDate.format('d-m-y') }}</p>
+                        {% if todo.status %}
+                            done!!
+                        {% else %}
+                            <a class="btn btn-success" href="/todos/{{ todo.id }}/update" class="card-link">mark as done</a>
 
-                    {% endif %}
-                    <a class="btn btn-danger" href="/todos/{{ todo.id }}/delete" class="card-link">Delete</a>
+                        {% endif %}
+                        <a class="btn btn-danger" href="/todos/{{ todo.id }}/delete" class="card-link">Delete</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    {%  endfor %}
+        {%  endfor %}
     </div>
-
+</div>
 {% endblock %}

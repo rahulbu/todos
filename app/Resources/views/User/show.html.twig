@@ -2,7 +2,15 @@
 
 
 {% block body %}
-    name : {{ user.name }} <br>
-    designation : {{ user.designation }} <br>
-
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">{{ user.name }}</h1>
+                <p>designation : {{ user.designation }}</p>
+                <a class="btn btn-secondary" href="/user/{{ app.user.username }}/changePassword">Change password</a>
+                <a class="btn btn-info" href="/user/{{ app.user.username }}/edit">Edit</a>
+                <a class="btn btn-danger"  href="/user/{{ app.user.username }}/delete">Delete Account</a>
+            </div>
+        </div>
+    </div>
 {% endblock %}

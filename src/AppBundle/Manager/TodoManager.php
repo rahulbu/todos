@@ -1,8 +1,8 @@
 <?php
 
-
 namespace AppBundle\Manager;
 
+use AppBundle\Entity\User;
 use Doctrine\Common\Persistence\ManagerRegistry as Doctrine;
 use AppBundle\Entity\Todo;
 
@@ -27,6 +27,7 @@ class TodoManager
 
     public function addTask(Todo $todoClone){
 
+        $user = $this->entityManager->getRepository(User::class)->findOneBy(array('userId'=>$todoClone->getUserId()));
         $todo = new Todo();
         $todo->setPriority($todoClone->getPriority());
         $todo->setDueDate($todoClone->getDueDate());
@@ -34,22 +35,20 @@ class TodoManager
         $todo->setCategory($todoClone->getCategory());
         $todo->setName($todoClone->getName());
         $todo->setCreatedAt(new \DateTime('now'));
-        $todo->setUserId();
+        $todo->setStatus(0);
+        $todo->setUserId($user);
 
         $this->entityManager->persist($todo);
         $this->entityManager->flush();
     }
 
     public function removeTask(Todo $todo){
-
         $this->entityManager->remove($todo);
         $this->entityManager->flush();
     }
 
-    public function findAllTodos(){
-        return $this->entityRepository->findAllTodos();
-//        return $this->queryBuilder->select()->from('Todo')->addGroupBy('Todo.status')->addOrderBy('Todo.dueDate','desc')->getQuery()->execute();
-
+    public function findAllTodos($id){
+        return $this->entityRepository->findAllTodos($id);
      }
     public function findTodo($id){
         return $this->entityRepository->findOneBy(array('id'=>$id));

@@ -11,7 +11,6 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-
 use AppBundle\Entity\Todo;
 
 class TodoController extends Controller
@@ -28,8 +27,8 @@ class TodoController extends Controller
      */
     public function indexAction()
     {
-
-        $todos = $this->todoManager->findAllTodos();
+        $user = $this->getUser();
+        $todos = $this->todoManager->findAllTodos($user->getUsername());
         return $this->render("Todo/index.html.twig",array('todos'=>$todos));
     }
 
@@ -44,7 +43,7 @@ class TodoController extends Controller
         $todo = new Todo();
 
         $form = $this->createFormBuilder($todo)
-            ->add('userId', TextType::class,array('attr'=>array('class'=>'form-control','Readonly'=>'true','value'=>$request->get('id',$default=null))))
+            ->add('userId', TextType::class,array('attr'=>array('class'=>'form-control','Readonly'=>'true','value'=>$this->getUser()->getUsername())))
             ->add('name', TextType::class,array('attr'=>array('class'=>'form-control')))
             ->add('category', TextType::class,array('attr'=>array('class'=>'form-control')))
             ->add('description', TextType::class,array('attr'=>array('class'=>'form-control')))
@@ -57,14 +56,10 @@ class TodoController extends Controller
 
         if($form->isSubmitted() && $form->isValid()){
 
-            $todo = $form->getData();
-
+            $todo->setUserId($this->getUser()->getUsername());
             $this->todoManager->addTask($todo);
-
             return $this->redirectToRoute('home');
         }
-
-
         return $this->render("Todo/create.html.twig",array('form'=>$form->createView()));
     }
 
@@ -76,10 +71,7 @@ class TodoController extends Controller
         $todo = $this->todoManager->findTodo($id);
         if(!$todo)
             throw $this->todoNotFoundException('task not found.');
-
-
         $form = $this->createFormBuilder($todo)
-//            ->add('userId', TextType::class,array('attr'=>array('class'=>'form-control','Readonly'=>'true','value'=>$request->get('id',$default=null))))
             ->add('name', TextType::class,array('attr'=>array('class'=>'form-control','value'=>$todo->getName())))
             ->add('category', TextType::class,array('attr'=>array('class'=>'form-control','value'=>$todo->getCategory())))
             ->add('description', TextType::class,array('attr'=>array('class'=>'form-control','value'=>$todo->getDescription())))
@@ -87,13 +79,13 @@ class TodoController extends Controller
             ->add('dueDate', DateTimeType::class,array('attr'=>array('class'=>'formcontrol')))
             ->add('submit', SubmitType::class,array('label'=>'Edit todo','attr'=>array('class'=>'btn btn-primary')))
             ->getForm();
+
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
             $this->todoManager->editTodo($form->getData());
             return $this->redirectToRoute('home');
         }
-        else
         return $this->render("Todo/edit.html.twig",array('form'=>$form->createView()));
     }
     /**
@@ -103,25 +95,23 @@ class TodoController extends Controller
         $todo = $this->todoManager->updateTodo($id);
         return $this->redirectToRoute('home');
     }
-
+    /**
+     * @Route("/todos/{id}/delete")
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function deleteAction($id){
+        $todo = $this->todoManager->findTodo($id);
+        $this->todoManager->removeTask($todo);
+        return $this->redirectToRoute("home");
+    }
     /**
      * @Route("/todos/{id}",name="show_todo")
      * @param $id
      * @return Response
      */
     public function showAction($id){
-        $details = $this->getDoctrine()->getRepository('AppBundle:Todo')->findOneBy(array("id"=>$id));
+        $details = $this->todoManager->findTodo($id);
         return $this->render("Todo/details.html.twig",array('details'=>$details));
-    }
-
-    /**
-     * @Route("/todos/{id}/delete")
-     * @param $id
-     */
-    public function deleteAction($id){
-        $todo = $this->getDoctrine()->getRepository('AppBundle:Todo')->findOneBy(array("id"=>$id));
-        $this->todoManager->removeTask($todo);
-
-        return $this->redirectToRoute("home");
     }
 }

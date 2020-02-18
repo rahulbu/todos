@@ -40,21 +40,30 @@
 
 <!-- Begin page content -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/"><i class="fas fa-home"></i>Home</a>
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    <a class="navbar-brand" href="/todos"><i class="fas fa-home"></i>Todos</a>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="/todos">Todos</a>
-            </li>
             <li class="nav-item">
                 <a class="nav-link" href="/todos/create">Create</a>
             </li>
         </ul>
     </div>
+    {% endif %}
     <div class="navbar-nav">
-
         <div class="nav-item" style="float:right;">
-            <a class="nav-link" href=""><i class="fas fa-user"></i>Profile</a>
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/{{ app.user.username }}"><i class="fas fa-user"></i>Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('logout') }}">logout</a>
+                    </li>
+                </ul>
+            {% else %}
+                <a class="nav-link" href="/user/new"><b>Register</b></a>
+            {% endif %}
         </div>
     </div>
 </nav>
@@ -69,11 +78,11 @@
     </div>
 </main>
 
-<footer class="footer mt-auto py-3">
-    <div class="container">
-        <span class="text-muted">TO-DO</span>
-    </div>
-</footer>
+{#<footer class="footer mt-auto py-3">#}
+{#    <div class="container">#}
+{#        <span class="text-muted">TO-DO</span>#}
+{#    </div>#}
+{#</footer>#}
 {% block javascripts %}{% endblock %}
 </body>
 </html>

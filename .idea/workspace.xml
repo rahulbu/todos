@@ -2,26 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ff0fb60-0f58-40d9-9896-bbb3c1960671" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/User/create.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/User/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/User/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/default/login.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Manager/UserManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Repository/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/Login/login.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Controller/LoginController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/LoginControllerTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/Todo/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/Todo/create.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/Todo/details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/Todo/details.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/Todo/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/Todo/edit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/Todo/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/Todo/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/User/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/User/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/User/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/User/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/default/login.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/TodoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/TodoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Todo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Todo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Manager/TodoManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Manager/TodoManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Manager/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Manager/UserManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Repository/TodoRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/TodoRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,6 +103,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Resources/views" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -115,7 +121,9 @@
       <workItem from="1581590122797" duration="7127000" />
       <workItem from="1581657556071" duration="8274000" />
       <workItem from="1581681767170" duration="2272000" />
-      <workItem from="1581875592298" duration="22036000" />
+      <workItem from="1581875592298" duration="22864000" />
+      <workItem from="1581932024727" duration="11302000" />
+      <workItem from="1582001750337" duration="11650000" />
     </task>
     <servers />
   </component>
@@ -126,6 +134,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="653" y="143" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581931985087">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="653" y="143" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.800@0.0.1280.800" timestamp="1581931985087" />
     <state x="378" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581879927071">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -134,9 +146,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="350" y="223" key="NewPhpClassDialog/0.0.1280.800@0.0.1280.800" timestamp="1581875746823" />
-    <state x="319" y="232" key="com.intellij.ide.util.TipDialog" timestamp="1581681772395">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="319" y="248" key="com.intellij.ide.util.TipDialog" timestamp="1582001829846">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="319" y="232" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1581681772395" />
+    <state x="319" y="232" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1581932029362" />
+    <state x="319" y="248" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1582001829846" />
   </component>
 </project>

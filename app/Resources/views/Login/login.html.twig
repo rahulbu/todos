@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AppBundle:Login:login{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="panel panel-success">
+            {% if errors %}
+             <div class="alert alert-danger">
+                 {{ errors.messageKey }}
+             </div>
+            {% endif %}
+            <div class="panel-heading">
+                <h3>Login</h3>
+            </div>
+            <div class="col-lg-4">
+            <form class="form" action="{{ path('login') }}" method="post">
+                <input class="form-control" type="text" name="_username" id="username" placeholder="userId" value="{{ username }}">
+                <input type="password" class="form-control" name="_password" id="password" placeholder="password">
+                <button type="submit" class="btn btn-info pull right">login</button>
+            </form>
+            </div>
+    </div>
+</div>
+{% endblock %}
