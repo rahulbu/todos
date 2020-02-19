@@ -25,12 +25,19 @@ class TodoController extends Controller
     /**
      * @Route("/todos",name="home")
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
-        $user = $this->getUser();
-        $todos = $this->todoManager->findAllTodos($user->getUsername());
+        $page_num = $request->get('page_num');
+        if(!$page_num)
+            $page_num = 1;
 
-        return $this->render("Todo/index.html.twig",array('todos'=>$todos));
+        $user = $this->getUser();
+        $todos = $this->todoManager->findAllTodos($user->getUsername(),$page_num);
+        $limit = 9;
+        $maxPages = ceil($todos->count()/$limit);
+//        $maxPages=10;
+
+        return $this->render("Todo/index.html.twig",array('todos'=>$todos,'thisPage'=>$page_num,'maxPages'=>$maxPages));
     }
 
     /**

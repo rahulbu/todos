@@ -23,5 +23,24 @@
             </div>
         {%  endfor %}
     </div>
+{% endblock %}
+{% block footer %}
+    <nav aria-label="...">
+        {% if maxPages > 1 %}
+        <ul class="pagination justify-content-center">
+            {% for i in 1..maxPages %}
+                {% if i == thisPage %}
+                    <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="/todos?page_num={{ i }}">{{ i }} <span class="sr-only">(current)</span></a>
+                    </li>
+                {% else %}
+                    <li class="page-item">
+                        <a class="page-link" href="/todos?page_num={{ i }}">{{ i }}</a>
+                    </li>
+                {% endif %}
+             {% endfor %}
+        </ul>
+        {% endif %}
+    </nav>
 </div>
 {% endblock %}

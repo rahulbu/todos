@@ -78,11 +78,12 @@
     </div>
 </main>
 
-{#<footer class="footer mt-auto py-3">#}
-{#    <div class="container">#}
+<footer class="footer mt-auto py-3">
+    <div class="container">
 {#        <span class="text-muted">TO-DO</span>#}
-{#    </div>#}
-{#</footer>#}
+        {% block footer %}{% endblock %}
+    </div>
+</footer>
 {% block javascripts %}{% endblock %}
 </body>
 </html>

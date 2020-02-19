@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ff0fb60-0f58-40d9-9896-bbb3c1960671" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/AppBundle/Controller/LoginControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/AppBundle/Controller/TodoControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/AppBundle/Controller/UserControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ToDo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ToDo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config_test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config_test.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/Todo/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/Todo/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/TodoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/TodoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Manager/TodoManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Manager/TodoManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Repository/TodoRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/TodoRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/LoginControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/LoginControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/AppBundle/Controller/DefaultControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/AppBundle/Controller/DefaultControllerTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +19,7 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
-      <executable />
+      <executable path="composer" />
     </execution>
   </component>
   <component name="Git.Settings">
@@ -107,7 +100,11 @@
       <recent name="$PROJECT_DIR$/app/Resources/views" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHP Script.TodoController.php">
+    <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
     <configuration name="TodoController.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/AppBundle/Controller/LoginController.php">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -138,7 +135,8 @@
       <workItem from="1581875592298" duration="22864000" />
       <workItem from="1581932024727" duration="11302000" />
       <workItem from="1582001750337" duration="18005000" />
-      <workItem from="1582087784604" duration="19045000" />
+      <workItem from="1582087784604" duration="19230000" />
+      <workItem from="1582129143981" duration="5907000" />
     </task>
     <servers />
   </component>
@@ -177,39 +175,47 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="378" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.800@0.0.1280.800" timestamp="1581879927071" />
-    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1582092949533">
+    <state x="401" y="320" width="478" height="245" key="ComposerInitDialogKey" timestamp="1582131441185">
       <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="401" y="320" width="478" height="245" key="ComposerInitDialogKey/0.0.1280.800@0.0.1280.800" timestamp="1582131441185" />
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1582114436722">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1582092949533" />
-    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1582092949532">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1582114436722" />
+    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1582114436722">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1582092949532" />
-    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1582092949530">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1238" height="212" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1582114436722" />
+    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1582114436721">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1582092949530" />
-    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1582092949533">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1238" height="212" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1582114436721" />
+    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1582114436722">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1582092949533" />
+    <state width="1238" height="212" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1582114436722" />
     <state x="350" y="223" key="NewPhpClassDialog" timestamp="1581875746823">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="350" y="223" key="NewPhpClassDialog/0.0.1280.800@0.0.1280.800" timestamp="1581875746823" />
-    <state x="149" y="39" key="SettingsEditor" timestamp="1582094300430">
+    <state x="149" y="39" key="SettingsEditor" timestamp="1582130142808">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1582094300430" />
-    <state x="319" y="248" key="com.intellij.ide.util.TipDialog" timestamp="1582087809020">
+    <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1582130142808" />
+    <state x="319" y="248" key="com.intellij.ide.util.TipDialog" timestamp="1582129145885">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="319" y="232" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1581932029362" />
-    <state x="319" y="248" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1582087809020" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1582110874155">
+    <state x="319" y="248" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1582129145885" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1582134661573">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1582110874155" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1582134661573" />
     <state x="370" y="319" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1582093845469">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

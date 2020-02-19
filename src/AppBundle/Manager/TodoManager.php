@@ -41,9 +41,8 @@ class TodoManager
         $this->entityManager->flush();
     }
 
-    public function findAllTodos($id){
-        return $this->entityRepository->findAllTodos($id);
-
+    public function findAllTodos($id,$page_num){
+        return $this->entityRepository->findAllTodos($id,$page_num-1);
      }
     public function findTodo($id){
         return $this->entityRepository->findOneBy(array('id'=>$id));
