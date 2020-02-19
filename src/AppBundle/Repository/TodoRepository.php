@@ -3,6 +3,7 @@
 namespace AppBundle\Repository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 use Doctrine\DBAL\Connection;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
  * TodoRepository
@@ -12,16 +13,23 @@ use Doctrine\DBAL\Connection;
  */
 class TodoRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function findAllTodos($id){
+    public function findAllTodos($id,$page_num=0){
         $qb = $this->createQueryBuilder('td')
             ->select('td.id','td.status','td.name','td.description','td.dueDate','td.createdAt','td.category','td.priority')
             ->where('td.userId = :userid')
             ->addOrderBy('td.status','asc')
             ->addOrderBy('td.dueDate','asc')
-            ->setParameter('userid',$id);
+            ->setParameter('userid',$id)
+            ->setFirstResult($page_num * 9)
+            ->setMaxResults(9);
         $query = $qb->getQuery();
 //        $sql = "select status, name,id,due_date as dueDate,created_at, description, category, priority as createdAt from todo where userId='rahul' group by status,dueDate,priority order by status,dueDate";
 //        return $this->getEntityManager()->getConnection()->query($sql);
-        return $query->execute();
+
+
+        $paginator = new Paginator($qb,false);
+
+        return $paginator;
+//        return $query->execute();
     }
 }

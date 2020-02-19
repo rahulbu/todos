@@ -80,7 +80,7 @@ class UserController extends Controller
     }
 
     /**
-     * @Route("/user/{id}/delete",methods={"GET"}, requirements={"id"="\d+"})
+     * @Route("/user/{id}/delete",methods={"GET"})
      */
     public function deleteAction($id){
         $this->userManager->deleteUser($id);

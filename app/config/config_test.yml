@@ -14,3 +14,20 @@ web_profiler:
 
 swiftmailer:
     disable_delivery: true
+
+security:
+    firewalls:
+        # replace 'main' by the name of your own firewall
+        main:
+            http_basic: ~
+
+
+doctrine:
+    # ...
+    dbal:
+        driver: pdo_mysql
+        host: 127.0.0.1
+        port: null
+        name: todos
+        user: root
+        password: null

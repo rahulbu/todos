@@ -11,6 +11,10 @@ class LoginControllerTest extends WebTestCase
         $client = static::createClient();
 
         $crawler = $client->request('GET', '/login');
+
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertContains('Login', $crawler->filter('#container h3')->text());
+
     }
 
 }

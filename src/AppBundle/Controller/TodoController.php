@@ -29,6 +29,7 @@ class TodoController extends Controller
     {
         $user = $this->getUser();
         $todos = $this->todoManager->findAllTodos($user->getUsername());
+
         return $this->render("Todo/index.html.twig",array('todos'=>$todos));
     }
 
