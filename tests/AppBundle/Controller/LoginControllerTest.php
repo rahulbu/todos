@@ -6,6 +6,23 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class LoginControllerTest extends WebTestCase
 {
+    public function testRegister(){
+        $client = static::createClient([]);
+        $crawler = $client->request('GET','/user/new');
+        $this->assertTrue(
+            $client->getResponse()->isSuccessful()
+        );
+
+        $form = $crawler->selectButton('form[save]')->form();
+        $form['form[userId]']='test';
+        $form['form[name]']='test';
+        $form['form[designation]']='test';
+        $form['form[password]']='test';
+        $client->submit($form);
+
+        $this->assertTrue($client->getResponse()->isRedirect());
+    }
+
     public function testLogin()
     {
         $client = static::createClient([]);
@@ -23,7 +40,7 @@ class LoginControllerTest extends WebTestCase
             $client->getResponse()->isRedirect("http://localhost/todos")
         );
 
-        $form['_username']= 'unknown';
+        $form['_username']= 'test';
         $form['_password']= 'wrongPassword';
 
         $client->submit($form);
@@ -44,11 +61,4 @@ class LoginControllerTest extends WebTestCase
         );
     }
 
-    public function testRegister(){
-        $client = static::createClient([]);
-        $crawler = $client->request('GET','/user/new');
-        $this->assertTrue(
-            $client->getResponse()->isSuccessful()
-        );
-    }
 }

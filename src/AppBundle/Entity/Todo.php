@@ -74,7 +74,7 @@ class Todo
 
     /**
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User")
-     * @ORM\JoinColumn(referencedColumnName="userId", name="userId")
+     * @ORM\JoinColumn(referencedColumnName="userId", name="userId", onDelete="CASCADE")
      */
     private $userId;
 

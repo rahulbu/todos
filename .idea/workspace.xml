@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ff0fb60-0f58-40d9-9896-bbb3c1960671" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/Todo/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/Todo/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/TodoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/TodoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Manager/TodoManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Manager/TodoManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Repository/TodoRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/TodoRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Todo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Todo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/AppBundle/Controller/LoginControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/AppBundle/Controller/LoginControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/AppBundle/Controller/TodoControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/AppBundle/Controller/TodoControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/AppBundle/Controller/UserControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/AppBundle/Controller/UserControllerTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +134,8 @@
       <workItem from="1581932024727" duration="11302000" />
       <workItem from="1582001750337" duration="18005000" />
       <workItem from="1582087784604" duration="19230000" />
-      <workItem from="1582129143981" duration="5907000" />
+      <workItem from="1582129143981" duration="6185000" />
+      <workItem from="1582175675616" duration="5255000" />
     </task>
     <servers />
   </component>
@@ -175,6 +174,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="378" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.800@0.0.1280.800" timestamp="1581879927071" />
+    <state x="457" y="269" width="600" height="300" key="ComposerAddDependencyOutputPopupDimensionServiceKey" timestamp="1582175852560">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="457" y="269" width="600" height="300" key="ComposerAddDependencyOutputPopupDimensionServiceKey/0.0.1280.800@0.0.1280.800" timestamp="1582175852560" />
     <state x="401" y="320" width="478" height="245" key="ComposerInitDialogKey" timestamp="1582131441185">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -203,19 +206,23 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="350" y="223" key="NewPhpClassDialog/0.0.1280.800@0.0.1280.800" timestamp="1581875746823" />
+    <state x="380" y="212" width="531" height="375" key="PHPComposerAddDependencyDialogDimensionKey" timestamp="1582175855486">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="380" y="212" width="531" height="375" key="PHPComposerAddDependencyDialogDimensionKey/0.0.1280.800@0.0.1280.800" timestamp="1582175855486" />
     <state x="149" y="39" key="SettingsEditor" timestamp="1582130142808">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1582130142808" />
-    <state x="319" y="248" key="com.intellij.ide.util.TipDialog" timestamp="1582129145885">
-      <screen x="0" y="23" width="1280" height="777" />
-    </state>
-    <state x="319" y="232" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1581932029362" />
-    <state x="319" y="248" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1582129145885" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1582134661573">
+    <state x="319" y="232" key="com.intellij.ide.util.TipDialog" timestamp="1582175676433">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1582134661573" />
+    <state x="319" y="232" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1582175676433" />
+    <state x="319" y="248" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1582129145885" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1582175726293">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1582175726293" />
     <state x="370" y="319" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1582093845469">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

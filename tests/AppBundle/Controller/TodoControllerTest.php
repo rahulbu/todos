@@ -29,33 +29,46 @@ class TodoControllerTest extends WebTestCase
         $this->assertTrue($this->client->getResponse()->isSuccessful());
     }
 
-    public function testCreate(){ // /todos/create
-        $this->client->request('GET','/todos/create');
+    public function testCreate(){
+        $crawler = $this->client->request('GET','/todos/create');
         $this->assertTrue($this->client->getResponse()->isSuccessful());
+
+        $form = $crawler->selectButton('form[save]')->form();
+        $form['form[name]']='test';
+        $form['form[category]']='test';
+        $form['form[priority]']='high';
+        $form['form[description]']='test';
+        $this->client->submit($form);
+
+        $this->assertTrue($this->client->getResponse()->isRedirect());
+
     }
 
-    public function testEdit(){ // /todos/{id}/edit
-        $this->client->request('GET','/todos/35/edit');
+    public function testShow(){
+
+        $crawler = $this->client->request('GET','/todos');
+
+        $link=$crawler->selectLink("test")->link();
+        $crawler = $this->client->click($link);
         $this->assertTrue($this->client->getResponse()->isSuccessful());
-    }
-
-    public function testShow(){ //  /todos/{id}
-        $this->expectException('InvalidArgumentException');
-
-        $crawler = $this->client->request('GET','/todos/35');
-        $this->assertTrue($this->client->getResponse()->isSuccessful());
-
-            $link = $crawler->selectLink('mark as done')->link(); // throws exception after first time run
-            $this->client->click($link);
-            $this->assertTrue($this->client->getResponse()->isRedirect());
 
         $link = $crawler->selectLink('Edit')->link();
         $this->client->click($link);
         $this->assertTrue($this->client->getResponse()->isSuccessful());
 
-//        $link = $crawler->selectLink('Delete')->link();
-//        $this->client->click($link);
-//        $this->assertTrue($this->client->getResponse()->isRedirect());
+        /*
+         * To test update (done) action
+         */
+        $link = $crawler->selectLink('mark as done')->link();
+        $this->client->click($link);
+        $this->assertTrue($this->client->getResponse()->isRedirect());
 
+        /**
+         * To test deleting of a task
+         * caution: the task gets deleted
+         */
+        $link = $crawler->selectLink('Delete')->link();
+        $this->client->click($link);
+        $this->assertTrue($this->client->getResponse()->isRedirect());
     }
 }

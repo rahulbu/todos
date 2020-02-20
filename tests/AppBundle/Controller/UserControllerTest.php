@@ -15,30 +15,16 @@ class UserControllerTest extends WebTestCase
         ]);
 
     }
-    public function testProfile()
-    {
 
-        $crawler = $this->client->request('GET','/user/test');
-        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());  //////// 1
+    public function testChangePassword(){
+        $crawler = $this->client->request('GET','/user/test/changePassword');
+        $this->assertTrue($this->client->getResponse()->isSuccessful());
 
-        $link = $crawler->selectLink('Change password')->link();
-
-        $this->client->click($link);
-        $this->assertTrue(
-            $this->client->getResponse()->isSuccessful()    /////////// 2
-        );
-
-        $link = $crawler->selectLink('Edit')->link();
-        $this->client->click($link);
-        $this->assertTrue(
-            $this->client->getResponse()->isSuccessful()    ////////////    3
-        );
-
-//        $link = $crawler->selectLink('Delete Account')->link();
-//        $this->client->click($link);
-//        $this->assertTrue(
-//            $this->client->getResponse()->isRedirect("http://localhost/login")
-//        );
+        $form = $crawler->selectButton('form[change password]')->form();
+        $form['form[password][first]']='test';
+        $form['form[password][second]']='test';
+        $this->client->submit($form);
+        $this->assertTrue($this->client->getResponse()->isRedirect());
     }
 
     public function testEdit(){
@@ -53,14 +39,33 @@ class UserControllerTest extends WebTestCase
         $this->assertTrue($this->client->getResponse()->isRedirect());
     }
 
-    public function testChangePassword(){
-        $crawler = $this->client->request('GET','/user/test/changePassword');
-        $this->assertTrue($this->client->getResponse()->isSuccessful());
+    public function testProfile()
+    {
 
-        $form = $crawler->selectButton('form[change password]')->form();
-        $form['form[password][first]']='test';
-        $form['form[password][second]']='test';
-        $this->client->submit($form);
-        $this->assertTrue($this->client->getResponse()->isRedirect());
+        $crawler = $this->client->request('GET','/user/test');
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+
+        $link = $crawler->selectLink('Change password')->link();
+
+        $this->client->click($link);
+        $this->assertTrue(
+            $this->client->getResponse()->isSuccessful()
+        );
+
+        $link = $crawler->selectLink('Edit')->link();
+        $this->client->click($link);
+        $this->assertTrue(
+            $this->client->getResponse()->isSuccessful()
+        );
+
+        /*
+         * To test delete action
+         * caution: logged in user gets deleted
+         */
+        $link = $crawler->selectLink("Delete Account")->link();
+        $this->client->click($link);
+        $this->assertTrue(
+            $this->client->getResponse()->isRedirect()
+        );
     }
 }
