@@ -23,7 +23,7 @@ class TodoController extends Controller
     }
 
     /**
-     * @Route("/todos",name="home")
+     * @Route("/todos",name="home",methods={"GET"})
      */
     public function indexAction(Request $request)
     {
@@ -35,7 +35,6 @@ class TodoController extends Controller
         $todos = $this->todoManager->findAllTodos($user->getUsername(),$page_num);
         $limit = 9;
         $maxPages = ceil($todos->count()/$limit);
-//        $maxPages=10;
 
         return $this->render("Todo/index.html.twig",array('todos'=>$todos,'thisPage'=>$page_num,'maxPages'=>$maxPages));
     }
@@ -96,14 +95,14 @@ class TodoController extends Controller
         return $this->render("Todo/edit.html.twig",array('form'=>$form->createView()));
     }
     /**
-     * @Route("/todos/{id}/update")
+     * @Route("/todos/{id}/update",methods={"GET"})
      */
     public function updateAction($id){
         $todo = $this->todoManager->updateTodo($id);
         return $this->redirectToRoute('home');
     }
     /**
-     * @Route("/todos/{id}/delete")
+     * @Route("/todos/{id}/delete",methods={"GET"})
      * @param $id
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
@@ -113,7 +112,7 @@ class TodoController extends Controller
         return $this->redirectToRoute("home");
     }
     /**
-     * @Route("/todos/{id}",name="show_todo")
+     * @Route("/todos/{id}",name="show_todo",methods={"GET"})
      * @param $id
      * @return Response
      */

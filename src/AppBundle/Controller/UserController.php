@@ -97,13 +97,12 @@ class UserController extends Controller
             $this->addFlash("notice", "unauthorised access");
             return $this->redirectToRoute('home');
         }
-
         $this->userManager->deleteUser($id);
         return $this->redirectToRoute('home');
     }
 
     /**
-     * @Route("/user/{id}/changePassword")
+     * @Route("/user/{id}/changePassword",methods={"GET","POST"})
      */
     public function changePasswordAction(Request $request,$id,UserPasswordEncoderInterface $passwordEncoder){
 
