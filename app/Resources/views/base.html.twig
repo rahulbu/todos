@@ -70,6 +70,12 @@
 <main role="main" class="flex-shrink-0">
     <div class="container">
 
+            {% for message in app.flashes('notice') %}
+                <div class="alert alert-danger">
+                    {{ message }}
+                </div>
+            {% endfor %}
+
         <div class="row">
             <div class="col-md-12">
                 {% block body %}{% endblock %}

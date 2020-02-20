@@ -52,9 +52,13 @@ class UserController extends Controller
      * @Route("/user/{id}",name="profile",methods={"GET"})
      */
     public function profileAction($id){
+
+        if($id!=$this->getUser()->getUsername()) {
+            $this->addFlash("notice", "unauthorised access");
+            return $this->redirectToRoute('home');
+        }
+
         $user = $this->userManager->getUser($id);
-        if(!$user)
-            throw $this->userNotFoundException('user does not exist. id : '.$id );
         return $this->render("User/show.html.twig",array('user'=>$user));
     }
 
@@ -62,6 +66,11 @@ class UserController extends Controller
      * @Route("/user/{id}/edit",methods={"GET","POST"})
      */
     public function editAction(Request $request,$id){
+
+        if($id!=$this->getUser()->getUsername()) {
+            $this->addFlash("notice", "unauthorised access");
+            return $this->redirectToRoute('home');
+        }
 
         $user = $this->userManager->getUser($id);
         $form = $this->createFormBuilder($user)
@@ -83,6 +92,12 @@ class UserController extends Controller
      * @Route("/user/{id}/delete",methods={"GET"})
      */
     public function deleteAction($id){
+
+        if($id!=$this->getUser()->getUsername()) {
+            $this->addFlash("notice", "unauthorised access");
+            return $this->redirectToRoute('home');
+        }
+
         $this->userManager->deleteUser($id);
         return $this->redirectToRoute('home');
     }
@@ -91,6 +106,12 @@ class UserController extends Controller
      * @Route("/user/{id}/changePassword")
      */
     public function changePasswordAction(Request $request,$id,UserPasswordEncoderInterface $passwordEncoder){
+
+        if($id!=$this->getUser()->getUsername()) {
+            $this->addFlash("notice", "unauthorised access");
+            return $this->redirectToRoute('home');
+        }
+
         $user = $this->userManager->getUser($id);
         $form = $this->createFormBuilder($user)
             ->add('password', RepeatedType::class, [
