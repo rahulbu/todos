@@ -3,4 +3,4 @@ app:
     type: annotation
 index:
     path: /
-    controller: AppBundle\Controller\LoginController::loginAction
+    controller: AppBundle\Controller\TodoController::indexAction
