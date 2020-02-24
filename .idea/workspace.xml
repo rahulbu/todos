@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1ff0fb60-0f58-40d9-9896-bbb3c1960671" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/TodoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/TodoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +132,9 @@
       <workItem from="1582001750337" duration="18005000" />
       <workItem from="1582087784604" duration="19230000" />
       <workItem from="1582129143981" duration="6185000" />
-      <workItem from="1582175675616" duration="10922000" />
+      <workItem from="1582175675616" duration="11193000" />
+      <workItem from="1582263250443" duration="384000" />
+      <workItem from="1582518961899" duration="673000" />
     </task>
     <servers />
   </component>
@@ -211,11 +213,11 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1582130142808" />
-    <state x="319" y="232" key="com.intellij.ide.util.TipDialog" timestamp="1582175676433">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="319" y="248" key="com.intellij.ide.util.TipDialog" timestamp="1582519056118">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="319" y="232" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1582175676433" />
-    <state x="319" y="248" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1582129145885" />
+    <state x="319" y="248" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1582519056118" />
     <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1582175726293">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

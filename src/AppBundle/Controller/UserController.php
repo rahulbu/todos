@@ -63,7 +63,7 @@ class UserController extends Controller
     }
 
     /**
-     * @Route("/user/{id}/edit",methods={"GET","POST"})
+     * @Route("/user/{id}/edit",methods={"GET","PUT"})
      */
     public function editAction(Request $request,$id){
 
@@ -73,7 +73,9 @@ class UserController extends Controller
         }
 
         $user = $this->userManager->getUser($id);
-        $form = $this->createFormBuilder($user)
+        $form = $this->createFormBuilder($user,[
+            'method'=>'PUT'
+        ])
             ->add('name', TextType::class,array('attr'=>array('class'=>'form-control')))
             ->add('designation', TextType::class,array('attr'=>array('class'=>'form-control')))
             ->add('save', SubmitType::class,array('label'=>'SAVE','attr'=>array('class'=>'btn btn-primary')))
@@ -102,7 +104,7 @@ class UserController extends Controller
     }
 
     /**
-     * @Route("/user/{id}/changePassword",methods={"GET","POST"})
+     * @Route("/user/{id}/changePassword",methods={"GET","PUT"})
      */
     public function changePasswordAction(Request $request,$id,UserPasswordEncoderInterface $passwordEncoder){
 
@@ -112,7 +114,9 @@ class UserController extends Controller
         }
 
         $user = $this->userManager->getUser($id);
-        $form = $this->createFormBuilder($user)
+        $form = $this->createFormBuilder($user,[
+            'method'=>'PUT'
+        ])
             ->add('password', RepeatedType::class, [
                 'type' => PasswordType::class,
                 'invalid_message' => 'The password fields must match.',

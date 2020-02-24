@@ -70,14 +70,16 @@ class TodoController extends Controller
     }
 
     /**
-     * @Route("/todos/{id}/edit",methods={"GET","POST"})
+     * @Route("/todos/{id}/edit",methods={"GET","PUT"})
      */
     public function editAction(Request $request,$id)
     {
         $todo = $this->todoManager->findTodo($id);
         if(!$todo)
             throw $this->todoNotFoundException('task not found.');
-        $form = $this->createFormBuilder($todo)
+        $form = $this->createFormBuilder($todo,[
+            'method' => 'PUT'
+        ])
             ->add('name', TextType::class,array('attr'=>array('class'=>'form-control','value'=>$todo->getName())))
             ->add('category', TextType::class,array('attr'=>array('class'=>'form-control','value'=>$todo->getCategory())))
             ->add('description', TextType::class,array('attr'=>array('class'=>'form-control','value'=>$todo->getDescription())))
