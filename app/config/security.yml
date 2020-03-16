@@ -31,4 +31,6 @@ security:
     access_control:
         - {path: ^/user/new, roles: IS_AUTHENTICATED_ANONYMOUSLY}
         - {path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY}
+        - {path: ^/insert, roles: IS_AUTHENTICATED_ANONYMOUSLY}
+        - {path: ^/show, roles: IS_AUTHENTICATED_ANONYMOUSLY}
         - { path: ^/, roles: IS_AUTHENTICATED_FULLY }
