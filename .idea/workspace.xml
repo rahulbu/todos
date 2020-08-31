@@ -2,9 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ff0fb60-0f58-40d9-9896-bbb3c1960671" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/php-docker-settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/provider.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/provider_consumer/banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/provider_consumer/banner1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/provider_consumer/cta.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/provider_consumer/facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/provider_consumer/footer-top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/provider_consumer/header.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/provider_consumer/instagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/provider_consumer/linkdine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/provider_consumer/twitter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/provider_consumer/youtube.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/DataFixtures/MessagesLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/DataFixtures/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Messages.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/MessagesMapper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Manager/MessagesManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Utils/MobileConstants.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/AppBundle/Entity/MessagesEntityTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/provider_consumer/banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/provider_consumer/banner1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/provider_consumer/cta.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/provider_consumer/facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/provider_consumer/footer-top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/provider_consumer/header.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/provider_consumer/instagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/provider_consumer/linkdine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/provider_consumer/twitter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/provider_consumer/youtube.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/TodoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/TodoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/services.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ArrayControllerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ArrayControllerController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Arraytest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Arraytest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +103,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -78,26 +110,37 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/AppBundle/Controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Resources/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Resources/views" />
+      <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/tests/AppBundle/Controller" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/AppBundle" />
       <recent name="$PROJECT_DIR$/app/Resources/views" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.TodoController.php">
+  <component name="RunManager" selected="PHP Script.test.php">
+    <configuration name="MessagesEntityTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="AppBundle\Tests\Entity\MessagesEntityTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/AppBundle/Entity/MessagesEntityTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MessagesManager.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/AppBundle/Manager/MessagesManager.php">
       <method v="2" />
     </configuration>
     <configuration name="TodoController.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/AppBundle/Controller/LoginController.php">
@@ -108,8 +151,14 @@
       </CommandLine>
       <method v="2" />
     </configuration>
+    <configuration name="test.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/AppBundle/Controller/test.php">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.test.php" />
+        <item itemvalue="PHP Script.MessagesManager.php" />
+        <item itemvalue="PHPUnit.MessagesEntityTest" />
         <item itemvalue="PHP Script.TodoController.php" />
       </list>
     </recent_temporary>
@@ -135,96 +184,87 @@
       <workItem from="1582175675616" duration="11193000" />
       <workItem from="1582263250443" duration="384000" />
       <workItem from="1582518961899" duration="673000" />
+      <workItem from="1583995252089" duration="1153000" />
+      <workItem from="1584371758368" duration="1561000" />
+      <workItem from="1584373793354" duration="740000" />
+      <workItem from="1584375970442" duration="48000" />
+      <workItem from="1584384231483" duration="3436000" />
+      <workItem from="1584416783197" duration="6492000" />
+      <workItem from="1584500509528" duration="20899000" />
+      <workItem from="1585501795731" duration="5757000" />
+      <workItem from="1586246089198" duration="160000" />
+      <workItem from="1586330441839" duration="1306000" />
+      <workItem from="1586573921588" duration="12505000" />
+      <workItem from="1587371909563" duration="7209000" />
+      <workItem from="1587909087542" duration="1173000" />
+      <workItem from="1588658037083" duration="3141000" />
+      <workItem from="1589198719829" duration="1740000" />
+      <workItem from="1589977741142" duration="538000" />
+      <workItem from="1590989689624" duration="3344000" />
+      <workItem from="1592311980667" duration="1137000" />
+      <workItem from="1592313612179" duration="909000" />
+      <workItem from="1592315578147" duration="1353000" />
+      <workItem from="1593500829567" duration="416000" />
+      <workItem from="1593692981828" duration="6533000" />
+      <workItem from="1594016724544" duration="5885000" />
+      <workItem from="1594661077965" duration="2129000" />
+      <workItem from="1595422350134" duration="1587000" />
+      <workItem from="1596457781052" duration="758000" />
+      <workItem from="1597132492183" duration="619000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="228" y="62" key="#CLI_Interpreters" timestamp="1582094298696">
+    <state x="79" y="62" key="#CLI_Interpreters" timestamp="1592316407029">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="228" y="62" key="#CLI_Interpreters/0.0.1280.800@0.0.1280.800" timestamp="1582094298696" />
-    <state x="240" y="65" key="#Notifications" timestamp="1582091623108">
+    <state x="79" y="62" key="#CLI_Interpreters/0.0.1280.800@0.0.1280.800" timestamp="1592316407029" />
+    <state x="378" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586696690086">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="65" key="#Notifications/0.0.1280.800@0.0.1280.800" timestamp="1582091623108" />
-    <state x="315" y="0" key="#PHP" timestamp="1582091600594">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="315" y="0" key="#PHP/0.0.1280.800@0.0.1280.800" timestamp="1582091600594" />
-    <state x="349" y="95" width="748" height="610" key="#TodoController.php" timestamp="1582090915922">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="349" y="95" width="748" height="610" key="#TodoController.php/0.0.1280.800@0.0.1280.800" timestamp="1582090915922" />
-    <state x="104" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582091169778">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="104" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1582091169778" />
-    <state x="653" y="143" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581931985087">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="653" y="143" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.800@0.0.1280.800" timestamp="1581931985087" />
-    <state x="378" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581879927071">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="378" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.800@0.0.1280.800" timestamp="1581879927071" />
-    <state x="457" y="269" width="600" height="300" key="ComposerAddDependencyOutputPopupDimensionServiceKey" timestamp="1582175852560">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="457" y="269" width="600" height="300" key="ComposerAddDependencyOutputPopupDimensionServiceKey/0.0.1280.800@0.0.1280.800" timestamp="1582175852560" />
-    <state x="401" y="320" width="478" height="245" key="ComposerInitDialogKey" timestamp="1582131441185">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="401" y="320" width="478" height="245" key="ComposerInitDialogKey/0.0.1280.800@0.0.1280.800" timestamp="1582131441185" />
-    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1582114436722">
+    <state x="378" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.800@0.0.1280.800" timestamp="1586696690086" />
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1592406843167">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1582092949533" />
-    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1582114436722" />
-    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1582114436722">
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1592316892265" />
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1592406843167" />
+    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1592406843166">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1582092949532" />
-    <state width="1238" height="212" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1582114436722" />
-    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1582114436721">
+    <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1592316892263" />
+    <state width="1238" height="212" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1592406843166" />
+    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1592406843166">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1582092949530" />
-    <state width="1238" height="212" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1582114436721" />
-    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1582114436722">
+    <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1592316892262" />
+    <state width="1238" height="212" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1592406843166" />
+    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1592406843167">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1582092949533" />
-    <state width="1238" height="212" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1582114436722" />
-    <state x="350" y="223" key="NewPhpClassDialog" timestamp="1581875746823">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="350" y="223" key="NewPhpClassDialog/0.0.1280.800@0.0.1280.800" timestamp="1581875746823" />
-    <state x="380" y="212" width="531" height="375" key="PHPComposerAddDependencyDialogDimensionKey" timestamp="1582175855486">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="380" y="212" width="531" height="375" key="PHPComposerAddDependencyDialogDimensionKey/0.0.1280.800@0.0.1280.800" timestamp="1582175855486" />
-    <state x="149" y="39" key="SettingsEditor" timestamp="1582130142808">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1582130142808" />
-    <state x="319" y="248" key="com.intellij.ide.util.TipDialog" timestamp="1582519056118">
+    <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1592316892264" />
+    <state width="1238" height="212" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1592406843167" />
+    <state x="350" y="240" key="NewPhpClassDialog" timestamp="1588957397006">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="319" y="232" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1582175676433" />
-    <state x="319" y="248" key="com.intellij.ide.util.TipDialog/0.23.1280.777@0.23.1280.777" timestamp="1582519056118" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1582175726293">
+    <state x="350" y="240" key="NewPhpClassDialog/0.23.1280.777@0.23.1280.777" timestamp="1588957397006" />
+    <state x="461" y="330" key="NewPhpFileDialog" timestamp="1592312306957">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1582175726293" />
-    <state x="370" y="319" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1582093845469">
+    <state x="461" y="330" key="NewPhpFileDialog/0.0.1280.800@0.0.1280.800" timestamp="1592312306957" />
+    <state x="0" y="39" key="SettingsEditor" timestamp="1593695987750">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="370" y="319" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1280.800@0.0.1280.800" timestamp="1582093845469" />
+    <state x="0" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1593695987750" />
+    <state x="305" y="143" width="670" height="657" key="search.everywhere.popup" timestamp="1594978869367">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="305" y="124" width="670" height="677" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1593695974983" />
+    <state x="305" y="143" width="670" height="657" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1594978869367" />
   </component>
 </project>

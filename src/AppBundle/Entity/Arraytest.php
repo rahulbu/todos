@@ -28,6 +28,12 @@ class Arraytest
      */
     private $arrayField;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="experiment_cohort", type="string", nullable=true)
+     */
+    private $experiment;
 
     /**
      * Get id

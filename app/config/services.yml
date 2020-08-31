@@ -33,4 +33,6 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
-    
+    AppBundle\Manager\:
+        resource: '../../src/AppBundle/Manager'
+        public: true

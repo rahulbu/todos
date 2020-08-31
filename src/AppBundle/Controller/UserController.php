@@ -59,7 +59,7 @@ class UserController extends Controller
         }
 
         $user = $this->userManager->getUser($id);
-        return $this->render("User/show.html.twig",array('user'=>$user));
+        return $this->render("User/show.html.twig",array('user'=>$user)); $this->json();
     }
 
     /**

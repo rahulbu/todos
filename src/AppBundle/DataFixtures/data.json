@@ -1,0 +1,240 @@
+[
+  {
+    "name": "DOCTOR_FEEDBACK_MAGIC_LINK_TEXT_IN",
+    "message": "%greeting%, Hope you're feeling better! Please write a feedback for %doctor_name% by clicking this link. {{link}}\nYour feedback will help lakhs of patients in %practice_city% make an informed choice.",
+    "entity": "DOCTOR",
+    "context": "COMMON",
+    "communicationType": "SMS",
+    "isMagicLink": true,
+    "countryCode": "IN",
+    "type": "DOCTOR_FEEDBACK_MAGIC_LINK_TEXT",
+    "hsmDataFields": [],
+    "isReminder": false
+  },
+  {
+    "name": "DOCTOR_FEEDBACK_MAGIC_LINK_TEXT_BR",
+    "message": "Como foi a sua experiência com %doctor_name% em %practice_name%? Seu feedback pode ajudar milhares de pessoas na Practo.\nDeixe seu feedback aqui: {{link}}\nT&C da Practo aplicáveis.",
+    "entity": "DOCTOR",
+    "context": "COMMON",
+    "communicationType": "SMS",
+    "isMagicLink": true,
+    "countryCode": "BR",
+    "type": "DOCTOR_FEEDBACK_MAGIC_LINK_TEXT",
+    "hsmDataFields": [],
+    "isReminder": false
+  },
+  {
+    "name": "DOCTOR_FEEDBACK_MAGIC_LINK_TEXT_ID",
+    "message": "Bagaimana pengalaman janji temu anda dengan %doctor_name% di %practice_name%? Feedback anda akan sangat membantu jutaan orang di Practo.\nBerikan feedback anda disini: {{link}}\nS&K Practo berlaku.",
+    "entity": "DOCTOR",
+    "context": "COMMON",
+    "communicationType": "SMS",
+    "isMagicLink": true,
+    "countryCode": "ID",
+    "type": "DOCTOR_FEEDBACK_MAGIC_LINK_TEXT",
+    "hsmDataFields": [],
+    "isReminder": false
+  },
+  {
+    "name": "DOCTOR_FEEDBACK_MAGIC_LINK_TEXT_PH",
+    "message": "How was your appointment experience with %doctor_name% at %practice_name%? Your feedback has potential to help lacs of people on Practo.\nGive your feedback here: {{link}}\nPracto's T&C applicable.",
+    "entity": "DOCTOR",
+    "context": "COMMON",
+    "communicationType": "SMS",
+    "isMagicLink": true,
+    "countryCode": "PH",
+    "type": "DOCTOR_FEEDBACK_MAGIC_LINK_TEXT",
+    "hsmDataFields": [],
+    "isReminder": false
+  },
+  {
+    "name": "DOCTOR_FEEDBACK_NON_MAGIC_LINK_TEXT_IN",
+    "message": "%greeting%, Hope you're feeling better! Please write a feedback for %doctor_name% by clicking this link. %doctor_feedback_url%\nYour feedback will help lakhs of patients in %practice_city% make an informed choice.",
+    "entity": "DOCTOR",
+    "context": "COMMON",
+    "communicationType": "SMS",
+    "isMagicLink": false,
+    "countryCode": "IN",
+    "type": "DOCTOR_FEEDBACK_NON_MAGIC_LINK_TEXT",
+    "hsmDataFields": [],
+    "isReminder": false
+  },
+  {
+    "name": "DOCTOR_FEEDBACK_NON_MAGIC_LINK_TEXT_BR",
+    "message": "Como foi a sua experiência com %doctor_name% em %practice_name%? Seu feedback pode ajudar milhares de pessoas na Practo.\nDeixe seu feedback aqui: %doctor_feedback_url%",
+    "entity": "DOCTOR",
+    "context": "COMMON",
+    "communicationType": "SMS",
+    "isMagicLink": false,
+    "countryCode": "BR",
+    "type": "DOCTOR_FEEDBACK_NON_MAGIC_LINK_TEXT",
+    "hsmDataFields": [],
+    "isReminder": false
+  },
+  {
+    "name": "DOCTOR_FEEDBACK_NON_MAGIC_LINK_TEXT_ID",
+    "message": "Bagaimana pengalaman janji temu anda dengan %doctor_name% di %practice_name%? Feedback anda akan sangat membantu jutaan orang di Practo.\nBerikan feedback anda disini: %doctor_feedback_url%",
+    "entity": "DOCTOR",
+    "context": "COMMON",
+    "communicationType": "SMS",
+    "isMagicLink": false,
+    "countryCode": "ID",
+    "type": "DOCTOR_FEEDBACK_NON_MAGIC_LINK_TEXT",
+    "hsmDataFields": [],
+    "isReminder": false
+  },
+  {
+    "name": "DOCTOR_FEEDBACK_NON_MAGIC_LINK_TEXT_PH",
+    "message": "How was your appointment experience with %doctor_name% at %practice_name%? Your feedback has potential to help lacs of people on Practo.\nGive your feedback here: %doctor_feedback_url%",
+    "entity": "DOCTOR",
+    "context": "COMMON",
+    "communicationType": "SMS",
+    "isMagicLink": false,
+    "countryCode": "PH",
+    "type": "DOCTOR_FEEDBACK_NON_MAGIC_LINK_TEXT",
+    "hsmDataFields": [],
+    "isReminder": false
+  },
+  {
+    "name": "DOCTOR_FEEDBACK_WHATSAPP_MAGIC_LINK_TEXT_IN",
+    "message": "{{1}}, Hope you're feeling better! Please write a feedback for {{2}} by clicking this link. {{magic_link}}\nYour feedback will help lakhs of patients in {{4}} make an informed choice.",
+    "entity": "DOCTOR",
+    "context": "COMMON",
+    "communicationType": "WHATSAPP",
+    "isMagicLink": true,
+    "countryCode": "IN",
+    "type": "DOCTOR_FEEDBACK_MAGIC_LINK_TEXT",
+    "hsmDataFields": [
+      "1",
+      "2",
+      "magic_link",
+      "4"
+    ],
+    "isReminder": false
+  },
+  {
+    "name": "DOCTOR_FEEDBACK_WHATSAPP_NON_MAGIC_LINK_TEXT_IN",
+    "message": "How was your appointment experience with {{doctor_name}} at {{practice_name}}? Your feedback has potential to help lacs of people on Practo.\nGive your feedback here: {{doctor_feedback_url}}",
+    "entity": "DOCTOR",
+    "context": "COMMON",
+    "communicationType": "WHATSAPP",
+    "isMagicLink": false,
+    "countryCode": "IN",
+    "type": "DOCTOR_FEEDBACK_NON_MAGIC_LINK_TEXT",
+    "hsmDataFields": [
+      "doctor_name",
+      "practice_name",
+      "doctor_feedback_url"
+    ],
+    "isReminder": false
+  },
+  {
+    "name": "DOCTOR_FEEDBACK_RAY_CHECKOUT_MAGIC_LINK_TEXT_IN",
+    "message": "%greeting%, thank you for visiting %practice_name%. We wish you a speedy recovery! Please leave your feedback for %doctor_name% by clicking this link. {{link}}",
+    "entity": "DOCTOR",
+    "context": "RAY_CHECKOUT",
+    "communicationType": "SMS",
+    "isMagicLink": true,
+    "countryCode": "IN",
+    "type": "DOCTOR_FEEDBACK_MAGIC_LINK_TEXT",
+    "hsmDataFields": [],
+    "isReminder": false
+  },
+  {
+    "name": "PRACTICE_FEEDBACK_MAGIC_LINK_TEXT_IN",
+    "message": "How was your appointment experience at %practice_name%? Your feedback has potential to help lacs of people on Practo.\nGive your feedback here: {{link}}\nPracto's T&C applicable.",
+    "entity": "PRACTICE",
+    "context": "COMMON",
+    "communicationType": "SMS",
+    "isMagicLink": true,
+    "countryCode": "IN",
+    "type": "PRACTICE_FEEDBACK_MAGIC_LINK_TEXT",
+    "hsmDataFields": [],
+    "isReminder": false
+  },
+  {
+    "name": "PRACTICE_FEEDBACK_NON_MAGIC_LINK_TEXT_IN",
+    "message": "%greeting%, Hope you're feeling better! Please leave a feedback for your doctor at %practice_name% by clicking this link. %practice_feedback_url%\nYour feedback will help lakhs of patients in %practice_city% make an informed choice",
+    "entity": "PRACTICE",
+    "context": "COMMON",
+    "communicationType": "SMS",
+    "isMagicLink": false,
+    "countryCode": "IN",
+    "type": "PRACTICE_FEEDBACK_NON_MAGIC_LINK_TEXT",
+    "hsmDataFields": [],
+    "isReminder": false
+  },
+  {
+    "name": "PRACTICE_FEEDBACK_WHATSAPP_MAGIC_LINK_TEXT_IN",
+    "message": "How was your appointment experience at {{practice_name}}? Your feedback has potential to help lacs of people on Practo.\nGive your feedback here: {{magic_link}}\nPracto's T&C applicable.",
+    "entity": "PRACTICE",
+    "context": "COMMON",
+    "communicationType": "WHATSAPP",
+    "isMagicLink": true,
+    "countryCode": "IN",
+    "type": "PRACTICE_FEEDBACK_MAGIC_LINK_TEXT",
+    "hsmDataFields": [
+      "practice_name",
+      "magic_link"
+    ],
+    "isReminder": false
+  },
+  {
+    "name": "PRACTICE_FEEDBACK_WHATSAPP_NON_MAGIC_LINK_TEXT_IN",
+    "message": "How was your appointment experience at {{practice_name}}? Your feedback has potential to help lacs of people on Practo.\nGive your feedback here: {{practice_feedback_url}}",
+    "entity": "PRACTICE",
+    "context": "COMMON",
+    "communicationType": "WHATSAPP",
+    "isMagicLink": false,
+    "countryCode": "IN",
+    "type": "PRACTICE_FEEDBACK_NON_MAGIC_LINK_TEXT",
+    "hsmDataFields": [
+      "practice_name",
+      "practice_feedback_url"
+    ],
+    "isReminder": false
+  },
+  {
+    "name": "TAB_WHATSAPP_PUBLISHED_REVIEW_TEXT_IN",
+    "message": "Thank you for submitting the feedback for {{doctor_name}} at {{practice_name}}.\n\nIf you have not given this feedback yourself or disagree with its contents, then please let us know here: {{magic_link}} - Practo",
+    "entity": "PRACTICE_TAB",
+    "context": "COMMON",
+    "communicationType": "WHATSAPP",
+    "isMagicLink": true,
+    "countryCode": "IN",
+    "type": "TAB_PRACTICE_FEEDBACK_MAGIC_LINK_PUBLISHED_REVIEW",
+    "hsmDataFields": [
+      "doctor_name",
+      "practice_name",
+      "magic_link"
+    ],
+    "isReminder": false
+  },
+  {
+    "name": "DOCTOR_FEEDBACK_REMINDER_MAGIC_LINK_TEXT_IN",
+    "message": "Hi, Your doctor is waiting to hear your feedback. Click here to share now: {{link}} Your feedback will help lakhs of patients in %practice_city% make an informed decision.",
+    "entity": "DOCTOR",
+    "context": "COMMON",
+    "communicationType": "SMS",
+    "isMagicLink": true,
+    "countryCode": "IN",
+    "type": "DOCTOR_FEEDBACK_REMINDER_MAGIC_LINK_TEXT",
+    "hsmDataFields": [],
+    "isReminder": true
+  },
+  {
+    "name": "DOCTOR_FEEDBACK_REMINDER_WHATSAPP_MAGIC_LINK_TEXT_IN",
+    "message": "Hi, Your doctor is waiting to hear your feedback. Click here to share now: {{magic_link}} Your feedback will help lakhs of patients in {{2}} make an informed decision.",
+    "entity": "DOCTOR",
+    "context": "COMMON",
+    "communicationType": "WHATSAPP",
+    "isMagicLink": true,
+    "countryCode": "IN",
+    "type": "DOCTOR_FEEDBACK_REMINDER_MAGIC_LINK_TEXT",
+    "hsmDataFields": [
+      "magic_link",
+      "2"
+    ],
+    "isReminder": true
+  }
+]
